@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <script src="jquery.js"></script>
+    <style>
+      h1 {
+        padding: 0px;
+        margin: 0px;
+        display: block;
+        text-align: center;
+        color: pink;
+        margin-bottom: 40px;
+      }
+      .box {
+        width: 300px;
+        height: 400px;
+        background-image: url("ljh.jpg");
+        background-size: 300px 400px;
+        background-repeat: no-repeat;
+        border: 2px solid black;
+        margin: 100px auto;
+        padding-top: 30px;
+      }
+      .box div {
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>爱你哦宝宝</h1>
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">输入不认识的字符：</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inp1"
+            placeholder="%A6%E6%9D%8E%E4%BD%B3" />
+        </div>
+        <button type="button" class="btn btn-success" id="btn1">
+          点击按钮转换为汉字
+        </button>
+        <div class="form-group">
+          <label for="exampleInputPassword1">输入汉字:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inp2"
+            placeholder="爱你哦宝宝" />
+        </div>
+
+        <button type="button" class="btn btn-success" id="btn2">
+          点击按钮转换为字符
+        </button>
+      </form>
+    </div>
+
+    <script>
+      $(function () {
+        $("#btn1").on("click", function () {
+          var str1 = $("#inp1").val().trim();
+          if (
+            str1 ===
+            "%E4%BD%A0%E4%B8%AA%E5%9D%8F%E5%A5%B3%E4%BA%BA%EF%BC%8C%E6%AF%8F%E6%AC%A1%E4%B8%80%E5%A3%B0%E4%B8%8D%E5%90%AD%E5%B0%B1%E8%B5%B0%E4%BA%BA%EF%BC%8C%E6%8A%8A%E6%88%91%E5%BD%93%E4%BB%80%E4%B9%88%E4%BA%86%E5%95%8A%EF%BC%8C%E8%A6%81%E4%B8%8D%E6%98%AF%E7%88%B1%E4%BD%A0%E8%B0%81%E4%BB%96%E5%A6%88%E7%9A%84%E4%BC%9A%E8%BF%99%E6%A0%B7%E8%88%94%E4%BD%A0%E5%95%8A%EF%BC%9F%E7%9C%9F%E7%9A%84%E6%B0%94%E6%AD%BB%E4%BA%BA%EF%BC%8C%E6%88%91%E4%B8%8D%E5%B0%B1%E6%98%AF%E8%AF%B4%E4%BA%86%E6%88%91%E8%A6%81%E8%B5%B0%E5%90%97%EF%BC%8C%E8%BF%98%E4%B8%8D%E6%98%AF%E4%B8%BA%E4%BA%86%E4%BD%A0%E5%BC%80%E5%BF%83%E5%90%97%EF%BC%9F%E4%BD%A0%E5%80%92%E5%A5%BD%E5%86%B7%E9%9D%99%E4%B8%A4%E5%A4%A9%EF%BC%8C%E5%88%B0%E7%8E%B0%E5%9C%A8%E4%BA%94%E5%A4%A9%E4%BA%86%EF%BC%8C%E6%B6%88%E6%81%AF%E5%B7%B2%E8%AF%BB%E4%B8%8D%E5%9B%9E%EF%BC%8C%E4%B8%8D%E5%A6%82%E6%AD%BB%E4%BA%86%E7%AE%97%E4%BA%86%E5%91%A2%EF%BC%8C%E8%B5%B6%E7%B4%A7%E5%99%B6%E6%8A%8A%EF%BC%8C%E7%A5%9D%E4%BD%A0%E6%B2%A1%E6%9C%89%E7%94%B7%E6%9C%8B%E5%8F%8B%EF%BC%8C%E5%AD%A4%E7%8B%AC%E7%BB%88%E8%80%81%EF%BC%8C%E5%93%88%E5%93%88%E5%93%88%E5%BC%80%E7%8E%A9%E7%AC%91%20%E4%BD%86%E6%88%91%E8%BF%98%E6%98%AF%E5%B8%8C%E6%9C%9B%E4%BD%A0%E5%8F%AF%E4%BB%A5%E6%98%AF%E6%88%91%E8%80%81%E5%A9%86%E5%91%A2"
+          ) {
+            alert(
+              "宝宝我是真的爱你呢，我知道错啦。总是犯错惹你生气还脑子抽风说要离开，真的傻逼，宝宝不在的几天真的很想你呢，真的怕宝宝就这样走了再也不理我，人真的只有在失去的时候在知道拥有的时候多幸福呢，爱你哦宝宝。"
+            );
+          } else {
+            alert(decodeURI(str1));
+          }
+        });
+
+        $("#btn2").on("click", function () {
+          var str1 = $("#inp2").val().trim();
+          if (
+            str1 ===
+            "宝宝我是真的爱你呢，我知道错啦。总是犯错惹你生气还脑子抽风说要离开，真的傻逼，宝宝不在的几天真的很想你呢，真的怕宝宝就这样走了再也不理我，人真的只有在失去的时候在知道拥有的时候多幸福呢，爱你哦宝宝。"
+          ) {
+            alert(
+              "%E4%BD%A0%E4%B8%AA%E5%9D%8F%E5%A5%B3%E4%BA%BA%EF%BC%8C%E6%AF%8F%E6%AC%A1%E4%B8%80%E5%A3%B0%E4%B8%8D%E5%90%AD%E5%B0%B1%E8%B5%B0%E4%BA%BA%EF%BC%8C%E6%8A%8A%E6%88%91%E5%BD%93%E4%BB%80%E4%B9%88%E4%BA%86%E5%95%8A%EF%BC%8C%E8%A6%81%E4%B8%8D%E6%98%AF%E7%88%B1%E4%BD%A0%E8%B0%81%E4%BB%96%E5%A6%88%E7%9A%84%E4%BC%9A%E8%BF%99%E6%A0%B7%E8%88%94%E4%BD%A0%E5%95%8A%EF%BC%9F%E7%9C%9F%E7%9A%84%E6%B0%94%E6%AD%BB%E4%BA%BA%EF%BC%8C%E6%88%91%E4%B8%8D%E5%B0%B1%E6%98%AF%E8%AF%B4%E4%BA%86%E6%88%91%E8%A6%81%E8%B5%B0%E5%90%97%EF%BC%8C%E8%BF%98%E4%B8%8D%E6%98%AF%E4%B8%BA%E4%BA%86%E4%BD%A0%E5%BC%80%E5%BF%83%E5%90%97%EF%BC%9F%E4%BD%A0%E5%80%92%E5%A5%BD%E5%86%B7%E9%9D%99%E4%B8%A4%E5%A4%A9%EF%BC%8C%E5%88%B0%E7%8E%B0%E5%9C%A8%E4%BA%94%E5%A4%A9%E4%BA%86%EF%BC%8C%E6%B6%88%E6%81%AF%E5%B7%B2%E8%AF%BB%E4%B8%8D%E5%9B%9E%EF%BC%8C%E4%B8%8D%E5%A6%82%E6%AD%BB%E4%BA%86%E7%AE%97%E4%BA%86%E5%91%A2%EF%BC%8C%E8%B5%B6%E7%B4%A7%E5%99%B6%E6%8A%8A%EF%BC%8C%E7%A5%9D%E4%BD%A0%E6%B2%A1%E6%9C%89%E7%94%B7%E6%9C%8B%E5%8F%8B%EF%BC%8C%E5%AD%A4%E7%8B%AC%E7%BB%88%E8%80%81%EF%BC%8C%E5%93%88%E5%93%88%E5%93%88%E5%BC%80%E7%8E%A9%E7%AC%91%20%E4%BD%86%E6%88%91%E8%BF%98%E6%98%AF%E5%B8%8C%E6%9C%9B%E4%BD%A0%E5%8F%AF%E4%BB%A5%E6%98%AF%E6%88%91%E8%80%81%E5%A9%86%E5%91%A2"
+            );
+          } else {
+            alert(encodeURI(str1));
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
